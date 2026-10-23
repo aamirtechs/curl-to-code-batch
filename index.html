@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curl to Code Batch: Convert a copied-as-cURL request to fetch, axios, Python req...</title>
+<meta name="description" content="Convert a copied-as-cURL request to fetch, axios, Python requests, Go or PHP, with auth headers automatically pulled out into environment variables and warnings for unsupported flags.">
+<meta name="keywords" content="curl to Python converter, convert curl to fetch, curl to code generator, curl to Go requests online">
+<meta name="author" content="Amir Hussain">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aamirtechs.github.io/curl-to-code-batch/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#0b1f3a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Curl to Code Batch">
+<meta property="og:description" content="Convert a copied-as-cURL request to fetch, axios, Python requests, Go or PHP, with auth headers automatically pulled out into environment variables and warnings for unsupported flags.">
+<meta property="og:url" content="https://aamirtechs.github.io/curl-to-code-batch/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Curl to Code Batch">
+<meta name="twitter:description" content="Convert a copied-as-cURL request to fetch, axios, Python requests, Go or PHP, with auth headers automatically pulled out into environment variables and warnings for unsupported flags.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Curl to Code Batch", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Amir Hussain", "url": "https://aamirtechs.com"}, "url": "https://aamirtechs.github.io/curl-to-code-batch/", "description": "Convert a copied-as-cURL request to fetch, axios, Python requests, Go or PHP, with auth headers automatically pulled out into environment variables and warnings for unsupported flags."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1f3a;--navy2:#122c50;--gold:#d4a72c;--ink:#16233a;--muted:#5a6a84;--line:#e3e9f2;--bg:#f6f8fb;--card:#ffffff}
+*{box-sizing:border-box}body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:44px 20px 34px;text-align:center}
+header h1{font-family:'Sora',sans-serif;font-size:2rem;margin:0 0 10px}header h1 span{color:var(--gold)}
+header p{max-width:720px;margin:0 auto 16px;color:#dbe4f2}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.stats span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 14px;font-size:.85rem}
+main{max-width:980px;margin:-18px auto 0;padding:0 16px 30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 8px 30px rgba(11,31,58,.08)}
+label{display:block;font-weight:700;font-size:.9rem;margin:14px 0 6px}
+textarea,input[type=text],input[type=number],select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:150px;font-family:ui-monospace,Menlo,monospace;font-size:.85rem}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.btn-run{background:var(--gold);color:var(--navy);border:0;border-radius:9px;padding:12px 22px;font-weight:800;cursor:pointer;font-size:1rem;margin-top:16px}
+.btn-sub{background:var(--navy);color:#fff;border:0;border-radius:9px;padding:10px 16px;font-weight:700;cursor:pointer;margin:8px 8px 0 0}
+.btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--navy);border-radius:9px;padding:9px 15px;font-weight:700;cursor:pointer;margin:8px 8px 0 0}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.87rem}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff}
+.flag{color:#b3261e;font-weight:700}.ok{color:#137333;font-weight:700}
+pre{background:#0b1f3a;color:#e8eef8;border-radius:10px;padding:14px;overflow:auto;font-size:.82rem;white-space:pre-wrap;word-break:break-word}
+.privacy{color:var(--muted);font-size:.9rem;margin-top:14px}
+section.how{max-width:980px;margin:22px auto;padding:0 16px}
+section.how h2{font-family:'Sora',sans-serif}
+footer{background:var(--navy);color:#dbe4f2;text-align:center;padding:24px 16px;margin-top:30px;font-size:.92rem}
+footer a{color:var(--gold)}
+.small{font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Curl to Code Batch</h1>
+  <p>Convert a copied-as-cURL request to fetch, axios, Python requests, Go or PHP, with auth headers automatically pulled out into environment variables.</p>
+  <div class="stats"><span>Free</span><span>100% in your browser</span><span>No sign-up</span></div>
+</header>
+<main>
+  <div class="card">
+    <label for="curlInput">Paste a cURL command (from DevTools, Copy as cURL, or API docs)</label>
+    <textarea id="curlInput">curl https://api.example.com/v1/items -X POST -H "Content-Type: application/json" -H "Authorization: Bearer REDACTED" -d '{"name":"widget","qty":2}'</textarea>
+    <p class="small">Authorization, cookie and API key headers are pulled out into environment variables in every target. The raw values never appear in the generated code.</p>
+    <button class="btn-run" id="runBtn">Convert</button>
+    <div id="warnings" class="small" style="margin-top:12px"></div>
+    <div id="outputs"></div>
+    <h3 style="font-family:'Sora',sans-serif">Back to cURL</h3>
+    <label for="backInput">Paste fetch or Python requests code</label>
+    <textarea id="backInput" style="min-height:90px"></textarea>
+    <div class="row">
+      <div><label for="backKind">Input kind</label><select id="backKind"><option value="fetch">fetch (JavaScript)</option><option value="python">Python requests</option></select></div>
+    </div>
+    <button class="btn-ghost" id="backBtn" type="button">Convert back to cURL</button>
+    <pre id="backOut" style="display:none"></pre>
+
+    <p class="privacy">Runs 100% in your browser. Your files never leave this device.</p>
+  </div>
+</main>
+<section class="how">
+  <h2>How it works</h2>
+  <ul>
+      <li>Parses multi-line cURL with quotes and line continuations, including -H, -d, -F, -b, -u and --json flags.</li>
+      <li>Generates fetch, axios, Python requests, Go net/http and PHP cURL from the same parsed request.</li>
+      <li>Authorization, cookie and API key headers are pulled out into environment variable placeholders by default, never inlined.</li>
+      <li>Warnings for flags with no equivalent in the target, plus a basic fetch or Python back to cURL converter.</li>
+  </ul>
+</section>
+<footer>
+  <p>Built by Amir Hussain, operations manager and founder of <a href="https://aamirtechs.com" target="_blank" rel="noopener">AamirTechs: operations, customer support and e-commerce services</a>.</p>
+  <p><a href="https://github.com/aamirtechs" target="_blank" rel="noopener">More open source tools on GitHub</a></p>
+</footer>
+<script src="src/logic.js"></script>
+<script>
+
+var L = window.CurlToCodeBatch;
+var TARGETS = [["fetch", "JavaScript fetch"], ["axios", "JavaScript axios"], ["python", "Python requests"], ["go", "Go net/http"], ["php", "PHP cURL"]];
+var lastAll = null;
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+function run() {
+  lastAll = L.convertAll(document.getElementById("curlInput").value);
+  var warn = lastAll.warnings.length ? "Warnings: " + lastAll.warnings.join(" ") : "No warnings. Method " + lastAll.request.method + ", " + lastAll.request.headers.length + " headers.";
+  document.getElementById("warnings").textContent = warn;
+  var html = "";
+  TARGETS.forEach(function (t) {
+    html += '<h3 style="font-family:\'Sora\',sans-serif;margin-bottom:6px">' + t[1] + '</h3><pre id="out-' + t[0] + '">' + esc(lastAll[t[0]]) + '</pre><button class="btn-ghost" data-copy="' + t[0] + '" type="button">Copy ' + t[1] + '</button><button class="btn-ghost" data-dl="' + t[0] + '" type="button">Download</button>';
+  });
+  document.getElementById("outputs").innerHTML = html;
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () { navigator.clipboard.writeText(lastAll[b.getAttribute("data-copy")]); b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy again"; }, 1200); });
+  });
+  document.querySelectorAll("[data-dl]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var kind = b.getAttribute("data-dl");
+      var ext = { fetch: "js", axios: "js", python: "py", go: "go", php: "php" }[kind];
+      var blob = new Blob([lastAll[kind]], { type: "text/plain" });
+      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "request." + ext; a.click(); URL.revokeObjectURL(a.href);
+    });
+  });
+}
+document.getElementById("runBtn").addEventListener("click", run);
+document.getElementById("backBtn").addEventListener("click", function () {
+  var kind = document.getElementById("backKind").value;
+  var out = kind === "python" ? L.pythonToCurl(document.getElementById("backInput").value) : L.fetchToCurl(document.getElementById("backInput").value);
+  var pre = document.getElementById("backOut");
+  pre.style.display = "block";
+  pre.textContent = out.error ? out.error : out.code + "\n\n# " + out.warnings.join(" ");
+});
+run();
+
+</script>
+</body>
+</html>
